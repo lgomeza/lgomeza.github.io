@@ -1,0 +1,540 @@
+@import url('reset.css');
+@import url('fuentes.css');
+
+/* --- Estilos Generales --- */
+
+body {
+	background: #fff;
+	font-family: Arial , Helvetica, Sans-serif;
+}
+
+a {
+	color: #201E78;
+}
+
+a: hover {
+	text-decoration: underline;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	width: 100%;
+	background: #269DA3; /* Old browsers */
+}
+
+header #subheader {
+	width: 1100px;
+	margin: auto;
+}
+
+header {
+	z-index: 100;
+}
+
+/* --- HEADER --- */
+
+header #subheader ul li i:hover{
+	color:#0C7C97;
+}
+
+/* --- SLIDER --- */
+
+
+
+ #slideshow #c-slider{
+	margin: auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+#slider{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 400%;
+}
+
+#slider section{
+	width: 100%;
+	height: 450px;
+}
+
+#slider img {
+	display: block;
+	width: 100%;
+	height: 450px;	
+}
+
+#btn-prev, #btn-next{
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 50%;	
+	transform: translateY(-150%);
+	line-height: 40px;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 50%;
+	font-family: monospace;
+	cursor: pointer;	
+}
+
+#btn-prev:hover, #btn-next:hover{
+	background: rgba(255, 255, 255, 1);	
+}
+
+#btn-prev{
+	left: 10px;
+}
+
+#btn-next{
+	right: 10px;
+}
+
+
+/* --- menu2 --- */
+
+nav ul {
+	list-style: none;
+}
+
+#logotipo {
+	float: left;
+}
+
+#menu2{
+		font-family: 'Open Sans', sans-serif;
+		float: right;
+}
+
+#menu2 > ul {
+    display:table;
+    width:100%;
+    /*
+    background: -moz-linear-gradient(top, #ffffff 0%, #f2f0ef 100%); 
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f2f0ef 100%); 
+	background: linear-gradient(to bottom, #ffffff 0%,#f2f0ef 100%); E
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f0ef',GradientType=0 ); 
+    position: relative;
+    border-radius: 3px;
+    */
+}
+
+#menu2 > ul li {
+	display: table-cell;
+}
+
+/*Sub-menu*/
+
+#menu2 > ul > li:hover > ul {
+	display: block;
+} 
+
+#menu2 > ul > li > ul {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 1100px;
+	margin: auto;
+}
+
+#menu2 > ul > li > ul {
+	display: none;
+}
+
+#menu2 > ul li a {
+	color: #fff;
+	display: block;
+	line-height: 20px;
+	padding: 15px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	font-size: 17px;
+}
+#menu2 > ul > li > ul > li a{
+	background: white;
+}
+
+#menu2 > ul > li > ul > li a:hover {
+	background: #0A0D4E;
+	color: white;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+#menu2 > ul > li > ul{
+	margin-right: 50px;
+}
+
+
+#menu2 > ul > li > ul > li a{
+	font-size: 12px;
+}
+
+#menu2 > ul > li a span {
+	border-radius: 3px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	top: -46px;
+	height: 0%;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+#menu2 > ul > li a .uno{
+	background: #E36D0B; 
+}
+
+#menu2 > ul > li a .dos{
+	background: #0A0D4E;
+}
+
+#menu2 > ul > li a .tres{
+	background: #086A87;
+}
+
+#menu2 > ul > li a .cuatro{
+	background: #045FB4;
+}
+
+#menu2 > ul > li a .cinco{
+	background: #0489B1;
+}
+
+#menu2 > ul > li a .seis{
+	background: #fff;
+}
+
+#menu2 > ul > li a .siete{
+	background: #B3AEA9;
+}
+
+#menu2 > ul > li a span:hover {
+	height: 100%;
+}
+
+#menu2 > ul > li a span .fa {
+	display: block;
+	line-height: 50px;
+	color: white;
+}
+
+#menu2 > ul > li a:hover > span {
+	top: 0;	
+}
+
+
+.header2{
+	position: fixed;
+	height: 70px;
+}
+
+.header2 img{
+	width: 100px;
+	height: 60px;
+}
+
+/* --- QUIENES SOMOS --- */
+
+
+#main{
+	color: #0A0D4E;
+}
+
+#main #somos{
+	width: 100%;
+	margin: auto;
+	background: #fff;
+}
+
+#main #somos ul{
+	list-style: none;
+}
+
+#main #somos #quienes #t1 h2{
+	font-size: 20px;
+	text-indent: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#mision p{
+	width: 480px;
+	float: left;
+	text-align: left;
+	padding: 30px;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #quienes {
+	width: 1100px;
+	margin:auto;
+}
+
+#main #somos > ul{
+	margin:auto;
+	text-align: center;
+}
+
+#video {
+	float: left;
+	margin: auto;
+	padding: 35px 0px;
+}
+
+#main #somos #quienes > h2{
+	text-align: center;
+	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+}
+
+#main #somos #quienes > p{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+#main #somos #quienes #t2 h2{
+	font-size: 20px;
+	text-indent: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #quienes #vision p{
+	float: left;
+	text-align: left;
+	width: 480px;
+	font-size: 14px;
+	padding: 30px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos hr{
+	margin:auto;
+	background-color: #0A0D4E;
+	border: 50;
+}
+
+#main #somos #t3 h2{
+	font-size: 28px;
+	text-align: center;
+	clear: both;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #politica p{
+	font-size: 14px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #t4 h2{
+	font-size: 28px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #objetivos ul{
+	font-size: 14px;
+	text-align: left;
+	list-style: disc;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #location h2{
+	margin: auto;
+	color: white;
+	font-size: 28px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main #somos #location{
+	margin: auto;
+	width: 100%;
+	background: #0B4C5F;
+	padding-bottom: 30px;
+	padding-top: 10px;
+}
+
+#main #somos #location #map{
+	margin: auto;
+	width: 1100px;
+	padding-left: 0px;
+}
+
+/* --- PRODUCTOS --- */
+
+#productos{
+	width: 100%
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: #086A87;
+}
+
+#productos h2{
+	text-align: center;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;	
+}
+
+#main #productos hr{
+	margin:auto;
+	background-color: #0A0D4E;
+	border: 50;
+}
+
+/* --- SLIDER2 ---*/
+.form_container {
+  width: 98%;
+  height: 500px;
+  padding-top: 0;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.form_container img {
+	width: 100%;
+	height: 500px;
+}
+
+.left, .right {
+  	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 50%;	
+	transform: translateY(150%);
+	line-height: 40px;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 50%;
+	font-family: monospace;
+	cursor: pointer;
+}
+.left {
+  left: 0px;
+  transform: translateX(30%);
+}
+.right {
+  right: 0px;
+  transform: translateX(-30%);
+}
+.form_container .slideContainer {
+  white-space: nowrap;
+}
+
+.form_container .slideContainer .slide {
+  display: inline-block;
+  margin: auto;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 20%;
+}
+
+
+/* --- CLIENTES --- */
+
+#clientes{
+	text-align: center;
+	background: #0489B1;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;	
+}
+
+#clientes #t6{
+	width: 1100px;
+	margin: auto;	
+}
+
+#clientes #t6 h2{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+}
+
+#clientes p{
+	width: 1100px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;	
+}
+
+#main #clientes hr{
+	margin:auto;
+	background-color: #fff;
+	border: 50;
+}
+
+.arriba{
+	display: inline-block;
+	padding: 15px 20px;
+	background: #000;
+	font-size: 30px;
+	color: #fff;
+	position: fixed;
+	cursor: pointer;
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+	border-radius: 50%;
+}
+
+/* --- FOOTER --- */
+
+footer{
+	background: #269DA3;
+	padding-bottom: 80px;
+	padding-top: 40px;
+
+}
+
+footer #foo{
+	width: 1100px;
+	margin: auto;
+}
+
+footer p{
+	text-align: right;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+
+	padding-left: 370px;
+}
+
+footer #menu1 a{
+	color: #fff,
+}
+
+footer #logo {
+	float: left;
+	padding-top: 0;
+}
+
+
