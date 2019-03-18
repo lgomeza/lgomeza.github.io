@@ -627,12 +627,10 @@ a:focus {
 .social .fa-facebook:hover {
   background: #3B5998;
 }
-.social .fa-twitter:hover {
+.social .fa-instagram:hover {
   background: #00ACED;
 }
-.social .fa-google-plus:hover {
-  background: #DD4B39;
-}
+
 .social .fa-linkedin:hover {
   background: #007BB6;
 }
