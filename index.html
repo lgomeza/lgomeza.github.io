@@ -518,13 +518,11 @@
               function whichButton(buttonElement){
                 alert(buttonElement.id);
                 var buttonClickedId = buttonElement.id;
-                if( buttonClickedId === 'alert' ){
-                  document.getElementsByTagName("div").removeAttribute("hidden");
-                }
+                document.getElementById("ALERT").removeAttribute("hidden");
               }
             </script>
 
-            <form action="http://www.u-work.me" class="contact-form" role="form" method="post">
+            <form class="contact-form" role="form" method="post">
               <i class="mdi-action-account-box"></i>
               <input type="text" class="form-control" name="name" placeholder="Nombre">
 
@@ -540,7 +538,7 @@
 <!--
               <textarea class="form-control" placeholder="Mensaje" rows="4"></textarea>
             -->
-              <button type="reset" id="alert" class="btn btn-lg btn-primary" onclick="whichButton(this)">Enviar</button>
+              <button type="reset"  class="btn btn-lg btn-primary" onclick="whichButton(this)">Enviar</button>
 
               <div class="alert alert-success fade in" id="ALERT" hidden>
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
