@@ -514,14 +514,6 @@
           <div id="form" class="col-md-6 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2 class="section-title">¡Suscríbete!</h2>
             <!-- Form -->
-            <script type = text/javascript>
-              function whichButton(buttonElement){
-                alert(buttonElement.id);
-                var buttonClickedId = buttonElement.id;
-                document.getElementById("ALERT").removeAttribute("hidden");
-              }
-            </script>
-
             <form class="contact-form" role="form" method="post">
               <i class="mdi-action-account-box"></i>
               <input type="text" class="form-control" name="name" placeholder="Nombre">
@@ -537,15 +529,10 @@
               <br>
 <!--
               <textarea class="form-control" placeholder="Mensaje" rows="4"></textarea>
-        -->
-              <button type="reset"  class="btn btn-lg btn-primary">Enviar</button>
-<!--
-              <div class="alert alert-success fade in" id="ALERT" hidden>
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>¡Gracias!</strong> Pronto nos contactaremos contigo.
+            -->
+              <button type="reset" id="submit" class="btn btn-lg btn-primary">Enviar</button>
+              <div id="success" style="color:#3F51B5;">
               </div>
--->
-
             </form>
           </div>
         </div>
