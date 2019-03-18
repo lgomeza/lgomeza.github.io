@@ -10,6 +10,15 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
+
+.contents #botoncito{
+  background: #3f51b5; 
+}
+
+.contents #botoncito:hover{
+  background: #3f40b2;
+}
+
 .btn-border {
   background: transparent;
   border: 1px solid #fff;
@@ -81,7 +90,7 @@ a:focus {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   padding: 0!important;
-  background: #3f51b5 !important;
+  background: #269DA3 !important;
 }
 .sticky-navigation .row {
   padding: 0;
@@ -106,6 +115,7 @@ a:focus {
   transition: transform 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  background: #269DA3;
 }
 .navbar-nav {
   margin: 0;
@@ -196,6 +206,7 @@ a:focus {
 .navbar .navbar-header {
   padding: 13px 0;
 }
+
 .menu-icon {
   background: transparent;
   border: none;
@@ -274,7 +285,7 @@ a:focus {
   margin: 0;
 }
 #why {
-  background: url(../img/why-bg.jpg);
+  background: url(../img/work2.jpg);
   background-size: cover;
   color: #fff;
 }
