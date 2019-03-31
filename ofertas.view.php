@@ -1,3 +1,5 @@
+﻿
+
 <!doctype html>
 <html lang="en">
 
@@ -47,10 +49,10 @@
     <div class="navbar navbar-invers menu-wrap">
       <div class="navbar-header text-center">
         <!-- <a class="navbar-brand logo-right" href="javascript:void(0)"><i class="mdi-image-timelapse"></i>UWork</a> -->
-        <a href="index.html" class=" navbar-brand logo-right"><img src="img/logo2.png" alt=""></a>
+        <a href="index.php" class=" navbar-brand logo-right"><img src="img/logo2.png" alt=""></a>
       </div>
         <ul class="nav navbar-nav main-navigation">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li><a href="#features">Características</a></li>
           <li><a href="#why">Quiénes Somos</a></li>
           <li class="active"><a href="#">Ofertas</a></li>

@@ -14,16 +14,18 @@
 
 	<br>
 
-	<h1 align="center">Registrarse como estudiante</h1>
+	<h1 align="center">Registrarse como Empresa</h1>
 	<br>
 
 	<div class="wrap">
 	<form action= "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" name="login">
-	<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>">
-	<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido:" value="<?php if(!$enviado && isset($apellido)) echo $apellido ?>">	
-	<input type="text" class="form-control" id="edad" name="edad" placeholder="Edad:" value="<?php if(!$enviado && isset($edad)) echo $edad ?>">
-	<input type="text" class="form-control" id="universidad" name="universidad" placeholder="Institucion educativa:" value="<?php if(!$enviado && isset($universidad)) echo $universidad ?>">
-	<input type="text" class="form-control" id="carrera" name="carrera" placeholder="Carrera:" value="<?php if(!$enviado && isset($carrera)) echo $carrera ?>">
+	<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la empresa:" value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>">
+		
+	<input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono de contacto:" value="<?php if(!$enviado && isset($Telefono)) echo $Telefono ?>">
+
+	<input type="text" class="form-control" id="NIT" name="NIT" placeholder="NIT: " value="<?php if(!$enviado && 
+		isset($NIT)) echo $NIT ?>">
+	
 	<input type="text" class="form-control" id="correo" name="correo" placeholder="Correo:" value="<?php if(!$enviado && isset($correo)) echo $correo ?>">
 	
 	<input type="password" class="form-control" id="password" name="password" placeholder="Contraseña:" >
@@ -43,7 +45,7 @@
 
 	</form>
 	<div class="cuenta">
-	<p> ¿ Ya tienes cuenta ? </p><a href="login.php">Inicia Sesion</a>
+	<p> ¿ Ya tienes cuenta ? </p><a href="loginEmpresa.php">Inicia Sesion</a>
 	</div>
 	</div>
 

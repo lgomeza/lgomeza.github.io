@@ -1,5 +1,5 @@
 <?php session_start();
-if(isset($_SESSION['usuario']))
+if(isset($_SESSION['empresa']))
 {
 	header('Location: index.php');
 }
@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 		echo "Error" . $e->getMessage();
 	}
 
-	$statement= $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo AND password = :password');
+	$statement= $conexion->prepare('SELECT * FROM empresas WHERE correo = :correo AND password = :password');
 	$statement->execute(array(
 		':correo' => $correo,
 		':password' => $password
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 	echo $resultado;
 	if($resultado !== false)
 	{
-		$_SESSION['usuario'] = $correo;
+		$_SESSION['empresa'] = $correo;
 		header('Location: index.php');
 	}
 	else
@@ -47,5 +47,5 @@ $enviado='';
 
 
 
-require 'login.view.php';
+require 'loginEmpresa.view.php';
 ?>
