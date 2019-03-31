@@ -304,16 +304,6 @@ a:focus {
   padding: 25px 40% 25px 20px;
 }
 
-#uno figcaption{
-  background-color: #fff;
-  background: #fff;
-}
-
-#dos figcaption{
-  background-color: #fff;
-  background: #fff;
-}
-
 .snip1543 figcaption:before,
 .snip1543 figcaption:after {
   position: absolute;
@@ -405,4 +395,11 @@ a:focus {
   transform: skew(-30deg) translateX(-30%);
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
+}
+
+.usuarios{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
