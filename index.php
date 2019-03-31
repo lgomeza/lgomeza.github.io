@@ -1,3 +1,15 @@
+﻿<?php
+session_start();
+$nombre="";
+if(isset($_SESSION['usuario'])  )
+{
+   $nombre= $_SESSION['usuario']; 
+}
+elseif(isset($_SESSION['empresa']))
+{
+  $nombre= $_SESSION['empresa']; 
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -51,11 +63,16 @@
       </div>
         <ul class="nav navbar-nav main-navigation">
           <li class="active"><a href="#home">Inicio</a></li>
-          <li><a href="#features">Características</a></li>
-          <li><a href="#why">Quiénes Somos</a></li>
-          <li><a href="ofertas.html">Ofertas</a></li>
-          <li><a href="#">Consejos</a></li>
+            <li><a href="ofertas.php">Ofertas</a></li>
+            <?php if(isset($_SESSION['usuario'])){ echo '  <li><a href="#">Consejos</a></li>';} ?>
+         
           <li><a href="#clients">Contacto</a></li>
+          <?php if($nombre== "" ){ echo '  <li><a href="Registro.html">Registro</a></li>';}  ?>
+
+          <?php if(isset($_SESSION['usuario']) OR isset($_SESSION['empresa']) ){ echo '  <li><a href="#">Mi Perfil</a></li>';}  ?>
+
+          <?php if(isset($_SESSION['usuario']) OR isset($_SESSION['empresa']) ){ echo '  <li><a href="cerrar.php">Cerrar Sesion</a></li>';} ?>
+
         </ul>
         <button class="close-button" id="close-button">Close Menu</button>
     </div>
@@ -69,7 +86,7 @@
               <div class="container">
                 <div class="navbar-header">
                   <!--<a class="logo-left " href="index.html"><i class="mdi-image-timelapse"></i>UWork</a> -->
-                  <a href="index.html" class="logo-left"><img src="img/logo2.png" alt="" width="40%"></a>
+                  <a href="index.php" class="logo-left"><img src="img/logo2.png" alt="" width="40%"></a>
                 </div>
                 <div class="navbar-right">
                   <button class="menu-icon"  id="open-button">
@@ -80,9 +97,9 @@
             </div>
         </div>
         <div class="contents text-right">
-          <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">UWork - Trabajo inteligente para estudiantes</h1>
+          <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms"> <?php if($nombre == ""){echo "UWork - Trabajo inteligente para estudiantes"; } else {echo "Hola, ". $nombre ;} ?> </h1>
           <a href="#form" class="btn btn-lg btn-primary wow fadeInUp" id="botoncito" data-wow-duration="1000ms" data-wow-delay="400ms">Suscribirse</a>
-          <a href="registro.html"  class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Registrarse</a>
+          <?php if(!isset($_SESSION['usuario'])){ echo '<a href="registro.html"  class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Registrarse</a>';} ?>
           <a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Conoce Más</a>
         </div>
     </header>
@@ -565,7 +582,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h3>Encuentranos en</h3>
               <a class="social" href="https://www.facebook.com/uworkco/" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a class="social" href="cerrar.php" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a class="social" href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
               <a class="social" href="https://www.instagram.com/uworkco/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
           </div>
@@ -582,10 +599,11 @@
         <div class="row">
           <div class="col-md-12">
             <p class="copyright-text">
-             © UWork 2019 Todos los derechos reservados.
+             © UWork 2019 Todos los derechos reservados. 
               <a href="#">
               </a>
             </p>
+            
           </div>
         </div>
       </div>
@@ -614,6 +632,23 @@
             $.material.init();
         });
     </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDrZ7GWdhntvS6yhK7iyDquVkzMmoBKcP4",
+    authDomain: "u-work-9fb6b.firebaseapp.com",
+    databaseURL: "https://u-work-9fb6b.firebaseio.com",
+    projectId: "u-work-9fb6b",
+    storageBucket: "u-work-9fb6b.appspot.com",
+    messagingSenderId: "951471060081"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js"></script>
+
   </body>
 
 </html>

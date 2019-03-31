@@ -14,7 +14,7 @@
 
 	<br>
 
-	<h1 align="center">Iniciar Sesión</h1>
+	<h1 align="center">Iniciar Sesión Empresarial</h1>
 	<br>
 
 	<div class="wrap">
@@ -32,7 +32,7 @@
 		<?php endif ?>
 	</form>
 <div class="cuenta">
-	<p> ¿ No tienes una cuenta ? </p><a href="registerEstudiante.php">Registrate</a>
+	<p> ¿ No tienes una cuenta ? </p><a href="registerEmpresa.php">Registrate</a>
 	</div>
 	</div>
 

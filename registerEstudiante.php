@@ -1,8 +1,8 @@
-﻿<?php session_start();
+<?php session_start();
 
 if(isset($_SESSION['usuario']))
 {
-	header('Location: index.html');
+	header('Location: index.php');
 }
 $errores='';
 $enviado='';
@@ -137,9 +137,10 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 				':correo'=> $correo,
 				':password'=>$password 
 			 ));
+			header('Location: login.php');
 		}
 
-		header('Location: login.php');
+		
 }
 
 require 'register.view.php';
